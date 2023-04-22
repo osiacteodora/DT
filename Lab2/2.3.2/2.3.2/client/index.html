@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+  <meta content="utf-8" http-equiv="encoding">
+  <title>Users manager</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  <script type="text/javascript" src="node_modules/axios/dist/axios.js"></script>
+  <script type="text/javascript" src="libs/vue/vue.js"></script>
+  <script type="text/javascript" src="libs/axios/axios.js"></script>
+  <script type="text/javascript" src="users.js"></script>
+</head>
+
+<body>
+  <div id="app">
+
+    <ul class="user-list">
+      <li v-for="(user, index) in users">
+        <div class="user-row">
+          <div class="user-name"><b>{{ user.name }}</b></div>
+          <div class="user-city"><i>{{ user.city }}</i></div>
+          <div class="user-id"><i>{{ user.id }}</i></div>
+        </div>
+      </li>
+    </ul>
+    <div>
+      <input type="number" v-model="id_delete" placeholder="id">
+      <button v-on:click=remove>Delete user </button>
+    </div>
+    <div>
+      <input type="text" v-model="name" placeholder="name">
+      <input type="text" v-model="city" placeholder="city">
+      <input type="number" v-model="id" placeholder="id">
+      <button v-on:click=adding>Add user </button>
+    </div>
+    <div>
+      <input type="text" v-model="name_update" placeholder="name">
+      <input type="text" v-model="city_update" placeholder="city">
+      <input type="number" v-model="id_update" placeholder="id">
+      <button v-on:click=adding>Update user </button>
+    </div>
+
+  </div>
+  <script src="app.js"></script>
+</body>
+
+</html>

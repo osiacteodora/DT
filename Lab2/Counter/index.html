@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+  <meta content="utf-8" http-equiv="encoding">
+
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="app.js" defer></script>
+</head>
+
+<body>
+  <div id="app">
+    <div class="counter" v-bind:title="value">{{ value }}</div>
+
+    <button class="inc" v-on:click="increment()">+</button>
+
+    <button class="decr" v-on:click="decrement()">-</button>
+
+  </div>
+  </div>
+</body>
+
+</html>
